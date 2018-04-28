@@ -1,0 +1,67 @@
+body{
+	height: 100vh;
+}
+
+.ball{
+	width: 50px;
+	height: 50px;
+	background-color: blue;
+	border-radius: 50%;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+	/*動畫*/
+	animation: move_right 1s 2s both,turn_to_card 1s 3s forwards;
+}
+
+@keyframes move_right{
+	0%{
+		left: 30%;
+	}
+	100%{
+		left: 70%;
+	}
+}
+
+@keyframes turn_to_card{
+	0%{
+		
+	}
+	100%{
+		width: 150px;
+		height: 150px;
+		border-radius: 0px;
+		background-color: yellow;
+		transition: all 1s;
+	}
+}
+
+.ball span{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 20px;
+	opacity: 0;
+
+	/*動畫*/
+	animation: text_fade_in 1s 4s forwards;
+}
+
+@keyframes text_fade_in{
+	0%{
+		opacity: 0.5;
+		top: 100%;
+	}
+	100%{
+		opacity: 1;
+		top: 50%;
+	}
+}
+
+
+
+
